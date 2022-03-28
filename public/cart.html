@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link href="css/cart.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <style>
+    .form p{
+  font-weight: bolder;
+}
+.navbar {
+    z-index: 3;
+    color: white;
+    background-color: #121214;
+    font-style: bold;
+    margin: 10px 10px 10px 10px;
+    width: 98%;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    float: left;
+    text-align: center;
+    padding-top: 29px;
+    text-size-adjust: 30px;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: rgb(77, 68, 68);
+    cursor: pointer;
+}
+
+
+.link {
+    padding-left: 50%;
+    cursor: pointer;
+}
+.inp{
+    padding-left:50px;
+    width:30px;
+   
+    border: black 2px solid;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+    padding-top: 10%;
+  }
+  
+  .menu {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+  }
+  
+  .menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+  }
+  
+  .menu-item {
+    display: flex;
+  }
+  
+  .menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-text {
+    flex-grow: 1;
+  }
+  
+  .menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  
+  .menu-item-name {
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-description {
+    line-height: 1.6;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .menu {
+      font-size: 16px;
+    }
+  
+    .menu-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .menu-item-image {
+      width: 125px;
+      height: 125px;
+    }
+  }
+    
+  .form {
+    text-align: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: 3px black solid;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 50px;
+}
+.inp {
+  height: 30px;
+  width: 60%;
+  border: black 2px solid;
+}
+
+.btn {
+  margin-left: 30%;
+  margin-top: 20px;
+  font-style: bold;
+  border: 2px black solid;
+  border-radius: 20px;
+  font-size: 25px;
+  height: 20%;
+  width: 40%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+}
+
+#zcerror,
+#pherror,
+#emailerror,
+#perror,
+#cperror,
+#usererror {
+  color: red;
+}
+
+#sucess {
+  color: green;
+  text-align: center;
+}
+  </style>
+    <div class="navbar">
+        <h1 style="padding-left: 5pxx;">Café N’ Chill</h1>
+        <div class="link">
+            <a href="wtlass1.html#zz">HOME</a>
+            <a href="wtlass1.html#a1">ABOUT US</a>
+            <a href="wtlass1.html#tab1">MENU</a>
+            <a href="wtlass1.html#foot">CONTACT US</a>
+            <a href="">
+                <img src="https://cdn3.iconfinder.com/data/icons/essential-rounded/67/Rounded-09-512.png" alt="cart" style="width:40px;height:40px;">
+             </a>
+        </div>
+    </div>
+  <div class="container">
+    <div class="menu">
+      <h2 class="menu-group-heading">
+        Starter
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuB-y0H8inzSr3u2IJnVoEq8UrFi1YRxr5Xg&usqp=CAU" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span  class="menu-item-name">Stir Fried Chilli Chicken</span>
+              <span  class="menu-item-price">$45</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i1" class="inp"  value="0" type="number" name="i1"  />
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://c.ndtvimg.com/2020-01/g6p2i6j8_paneer-tikka_625x300_24_January_20.jpg" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Microwave Paneer Tikkas</span>
+              <span class="menu-item-price">$20</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i2" class="inp" value="0" type="number" name="i2"  />
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="menu-group-heading">
+        Main Course 
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://www.cookingclassy.com/wp-content/uploads/2021/01/butter-chicken-4-768x1149.jpg" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Butter Chicken</span>
+              <span class="menu-item-price">$175</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i3" class="inp" value="0" type="number" name="i3" />
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://savoryspin.com/wp-content/uploads/2021/04/PlantBased-Cashew-Curry-768x1092.jpg.webp" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Sri Lankan Cashew Curry</span>
+              <span class="menu-item-price">$120</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i4" class="inp" value="0" type="number" name="i4"  />
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="menu-group-heading">
+        Cakes and Desserts
+      </h2>
+      <div class="menu-group">
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVQqfL3tidrAm9Dbx-dDAuUai70_RiQZpMkg&usqp=CAU" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name"> Pies & Cookies</span>
+              <span class="menu-item-price">$50</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i5" class="inp" value="0" type="number" name="i5"  />
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img class="menu-item-image" src="https://i2.wp.com/www.thatskinnychickcanbake.com/wp-content/uploads/2018/11/Italian-Flourless-Chocolate-Cake-3.jpg" alt="Bruschetta">
+          <div class="menu-item-text">
+            <h3 class="menu-item-heading">
+              <span class="menu-item-name">Caprese Cake With Whipped Cream</span>
+              <span class="menu-item-price">$100</span>
+            </h3>
+            <p class="menu-item-description">
+              Nunc efficitur felis vel mi efficitur, sed molestie sem scelerisque. Fusce orci risus,
+              congue eu mauris nec, pretium tincidunt nulla.
+            </p>
+            <div style="float: right;">
+                <p style="font-style: bold;">Quantity</p>
+                <input id="i6" class="inp" value="0" type="number" name="i6"  />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <form class="form">
+    <h2>Your Details</h2>
+    <p>Name</p>
+    <input id="user" class="inp" type="text" name="username" />
+    <p id="usererror"></p>
+    <p>Phone number</p>
+    <input id="ph" class="inp" type="number" name="phno" />
+    <p id="pherror"></p>
+    <p>Address</p>
+    <input id="ea" class="inp" type="text" name="email" />
+    <p id="emailerror"></p>
+    <div>
+     <p style="font-size: 25px; font-weight: bolder;">Your Order:</p>
+     <div>
+      <p id="orderi1"> </p>
+      <p id="orderi2"> </p>
+      <p id="orderi3"> </p>
+      <p id="orderi4"> </p>
+      <p id="orderi5"> </p>
+      <p id="orderi6"> </p>
+     </div>
+     <p style=" font-weight: bolder;">Items Total:</p>
+       <span id="total"style=" font-weight: bolder;"></span>
+
+       <p style=" font-weight: bolder;">Taxes & Charges:</p>
+       <span style=" font-weight: bolder;"id="tax"></span>
+       
+       <p style="font-size: 25px; font-weight: bolder;">Grand Total:</p>
+       <span style=" font-weight: bolder;" id="gtotal"></span>
+
+    </div>
+    <p id="sucess"></p>
+    <button class="btn" type="button" name="Submit" onclick=" return submitform()">
+    Order
+  </button>
+</form>
+
+<script>
+    let cart=[
+      {
+        id:'i1',
+        name:'Stir Fried Chilli Chicken',
+        price:'45'
+      },
+      {
+        id:'i2',
+        name:'Microwave Paneer Tikkas',
+        price:'20'
+      },
+      {
+        id:'i3',
+        name:'Butter Chicken',
+        price:'175'
+      },
+      {
+        id:'i4',
+        name:'Sri Lankan Cashew Curry',
+        price:'120'
+      },
+      {
+        id:'i5',
+        name:'Pies & Cookies',
+        price:'50'
+      },
+      {
+        id:'i6',
+        name:'Caprese Cake With Whipped Cream',
+        price:'100'
+      },
+      
+    ]
+    let ph = document.getElementById("ph");
+    let ea = document.getElementById("ea");
+    let p = document.getElementById("p");
+    let i1 = document.getElementById("i1");
+    let i2 = document.getElementById("i2");
+    let i3 = document.getElementById("i3");
+    let i4 = document.getElementById("i4");
+    let i5 = document.getElementById("i5");
+    let i6 = document.getElementById("i6");
+    let user = document.getElementById("user");
+    let count = 0;
+    flag=0;
+    sum=0;
+    let check = " ";
+    user.focus();
+
+    function submitform() {
+        let orderi1=`${cart[0].name}----\$${cart[0].price}---- x ${i1.value}`;
+        let orderi2=`${cart[1].name}----\$${cart[1].price}---- x ${i2.value}`;
+        let orderi3=`${cart[2].name}----\$${cart[2].price}---- x ${i3.value}`;
+        let orderi4=`${cart[3].name}----\$${cart[3].price}---- x ${i4.value}`;
+        let orderi5=`${cart[4].name}----\$${cart[4].price}---- x ${i5.value}`;
+        let orderi6=`${cart[5].name}----\$${cart[5].price}---- x ${i6.value}`;
+        console.log(cart);
+        if(cart[0].id=='i1' && i1.value>0){
+          document.getElementById("orderi1").innerHTML= orderi1;
+          flag=1;
+          sum+=(Number(i1.value))*(Number(cart[0].price));
+          
+        }
+        
+        if(cart[1].id=='i2' && i2.value>0){
+          document.getElementById("orderi2").innerHTML= orderi2;
+          flag=1;
+          sum+=(Number(i2.value))*(Number(cart[1].price));
+        }
+        if(cart[2].id=='i3' && i3.value>0){
+          document.getElementById("orderi3").innerHTML= orderi3;
+          flag=1;
+          sum+=(Number(i3.value))*(Number(cart[2].price));
+        }
+        if(cart[3].id=='i4' && i4.value>0){
+          document.getElementById("orderi4").innerHTML= orderi4;
+          flag=1;
+          sum+=(Number(i4.value))*(Number(cart[3].price));
+        }
+        if(cart[4].id=='i5' && i5.value>0){
+          document.getElementById("orderi5").innerHTML= orderi5;
+          flag=1;
+          sum+=(Number(i5.value))*(Number(cart[4].price));
+        }
+        if(cart[5].id=='i6' && i6.value>0){
+          document.getElementById("orderi6").innerHTML= orderi6;
+          flag=1;
+          sum+=(Number(i6.value))*(Number(cart[5].price));
+        }
+       console.log(sum);
+       //total
+        document.getElementById("total").innerHTML=`\$${sum}`;
+        let tax=((sum*15)/100);
+        document.getElementById("tax").innerHTML=`15%----\$${tax}`;
+        let gtotal=sum+tax;
+        document.getElementById("gtotal").innerHTML=`\$${gtotal}`;
+        //form
+        if (user.value.trim().length == 0) {
+            document.getElementById("usererror").innerHTML =
+                "Invalid Username !!";
+            user.style.borderColor = "red";
+        } else {
+            count++;
+        }
+        if (ph.value.length != 10) {
+            document.getElementById("pherror").innerHTML = "Invalid Phone No !!";
+            ph.style.borderColor = "red";
+        } else {
+            count++;
+        }
+
+        if (ea.value.trim().length == 0){
+            document.getElementById("emailerror").innerHTML = "Invalid Address !!";
+            ea.style.borderColor = "red";
+        } else {
+            count++;
+        }
+
+
+        if (count == 3 && flag==1) {
+            document.getElementById("sucess").innerHTML =
+                "Ordered Sucessfully !!";
+            console.log(user.value);
+            console.log(ph.value);
+            console.log(ea.value);
+        }
+        else{
+          let error=document.getElementById("sucess");
+                error.innerHTML ="Check Details!!";
+                error.style.color= "red";
+              
+
+        }
+
+        
+           
+        
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+.form p{
+  font-weight: bolder;
+}
+.navbar {
+    z-index: 3;
+    color: white;
+    background-color: #121214;
+    font-style: bold;
+    margin: 10px 10px 10px 10px;
+    width: 98%;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+a {
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    float: left;
+    text-align: center;
+    padding-top: 29px;
+    text-size-adjust: 30px;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: rgb(77, 68, 68);
+    cursor: pointer;
+}
+
+
+.link {
+    padding-left: 50%;
+    cursor: pointer;
+}
+.inp{
+    padding-left:50px;
+    width:30px;
+   
+    border: black 2px solid;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+    padding-top: 10%;
+  }
+  
+  .menu {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+  }
+  
+  .menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+  }
+  
+  .menu-item {
+    display: flex;
+  }
+  
+  .menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-text {
+    flex-grow: 1;
+  }
+  
+  .menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  
+  .menu-item-name {
+    margin-right: 1.5em;
+  }
+  
+  .menu-item-description {
+    line-height: 1.6;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .menu {
+      font-size: 16px;
+    }
+  
+    .menu-group {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .menu-item-image {
+      width: 125px;
+      height: 125px;
+    }
+  }
+    
+  .form {
+    text-align: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: 3px black solid;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 50px;
+}
+.inp {
+  height: 30px;
+  width: 60%;
+  border: black 2px solid;
+}
+
+.btn {
+  margin-left: 30%;
+  margin-top: 20px;
+  font-style: bold;
+  border: 2px black solid;
+  border-radius: 20px;
+  font-size: 25px;
+  height: 20%;
+  width: 40%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+}
+
+#zcerror,
+#pherror,
+#emailerror,
+#perror,
+#cperror,
+#usererror {
+  color: red;
+}
+
+#sucess {
+  color: green;
+  text-align: center;
+}

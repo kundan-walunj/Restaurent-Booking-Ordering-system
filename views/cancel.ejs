@@ -1,0 +1,162 @@
+<%- include('partials/header') %>
+<style>
+    .navbar {
+z-index: 3;
+color: white;
+background-color: #121214;
+font-style: bold;
+margin: 10px 10px 10px 10px;
+width: 98%;
+display: flex;
+position: fixed;
+overflow: hidden;
+border-radius: 10px;
+}
+
+a {
+color: white;
+display: block;
+padding: 14px 16px;
+float: left;
+text-align: center;
+padding-top: 29px;
+text-size-adjust: 30px;
+font-size: 20px;
+}
+
+a:hover {
+background-color: rgb(77, 68, 68);
+cursor: pointer;
+}
+
+
+.link {
+padding-left: 50%;
+cursor: pointer;
+}
+.img1 {
+
+margin:0%;
+padding: 0%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+top:0%;
+left: 0%;
+right: 0%;
+}
+.container {
+position: relative;
+z-index: 0;
+}
+.cnt {
+float: right;
+
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.imgtext {
+position: absolute;
+text-align: center;
+font-size: 25px;
+font-family: "Times New Roman", Times, serif;
+color: white;
+top: 10%;
+left: 36%;
+}
+
+    
+    
+    .form {
+        text-align: left;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: white;
+        
+    }
+    .bc{
+        background-color:#121214;
+        padding:3px;
+        margin-right: 50%;
+        
+    }
+    
+    h1 {
+        
+        font-style: bold;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    
+    p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 25px;
+        font-style: bold;
+        
+          }
+    
+    .inp {
+        height: 35px;
+        width: 140%;
+        border: black 2px solid;
+    }
+    
+    .btn {
+        margin-left:130px;
+        margin-top: 20px;
+        font-style: bold;
+        border: 2px black solid;
+        border-radius: 20px;
+        font-size: 25px;
+        height: 40%;
+        width: 55%;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        color: white;
+        background-color: black;
+    }
+    
+    #zcerror,
+    #pherror,
+    #emailerror,
+    #perror,
+    #cperror,
+    #usererror {
+        color: red;
+    }
+    
+    #sucess {
+        color: green;
+       padding-left: 126px;
+    }
+</style>
+<div class="navbar">
+    <h1 style="padding-left: 5pxx;">Café N’ Chill</h1>
+    <div class="link">
+        <a href="home#cnt">HOME</a>
+        <a href="home#a1">ABOUT US</a>
+        <a href="home#tab1">MENU</a>
+        <a href="home#foot">CONTACT US</a>
+        <a href="cart">
+            <img src="https://cdn3.iconfinder.com/data/icons/essential-rounded/67/Rounded-09-512.png" alt="cart" style="width:40px;height:40px;">
+         </a>
+    </div>
+</div>
+<div id="cnt" class="container">
+<img class="img1" src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGFibGUlMjByZXN0YXVyYW50fGVufDB8fDB8fA%3D%3D&w=1000&q=80" height="1200px" width="100%" alt="home" />
+<div class="imgtext">
+<form class="form" action="/cancel" method="POST" >
+    <p class="bc">Table Number</p>
+    <input id="ph" class="inp" type="text" name="table_id"/>
+    <button class="btn" type="submit" name="Submit" onclick="return confirm('Are you sure')">
+        Delete
+    </button>
+</form>
+
+</div>
+</div>
+
+<%- include('partials/header') %>

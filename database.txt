@@ -1,0 +1,91 @@
+Login
+user_id -> Phone Number
+username
+password
+
+Booking
+table_id -> Auto Increment < 15
+user_id -> Phone Number
+Date
+Number_of_ppl
+
+Order
+user_id -> Phone Number
+order_id -> Auto Generate
+Address
+Food
+Amount
+
+Menu
+Food_id
+Food_name
+Price
+
+create database restaurant;
+use restaurant;
+create table login(
+user_id bigint Primary key,
+username varchar(30),
+password varchar(20)
+);
+create table booking(
+table_id int Primary Key Auto_increment,
+user_id bigint,
+date date,
+number_of_ppl int,
+Constraint fk_user
+Foreign key (user_id)
+References login(user_id)
+ON delete cascade
+ON update cascade
+);
+create table orders(
+user_id bigint,
+order_id int Primary key Auto_increment,
+Address varchar(40),
+Food varchar(40),
+Amount int,
+Constraint fk_order
+Foreign key (user_id)
+References login(user_id)
+ON delete cascade
+ON update cascade
+);
+create table menu(
+Food_id int Primary key auto_increment,
+Food_name varchar(30),
+price int
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
